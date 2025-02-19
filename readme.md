@@ -23,7 +23,7 @@ The **Padel Hall Booking System** is a **full-stack application** that allows us
 - RESTful API
 - Unit Testing (Mocha, Chai, Supertest)
 
-### **Frontend (To be developed)**
+### **Frontend**
 - Angular
 - SCSS for styling
 - TypeScript
@@ -92,6 +92,8 @@ npm test
 ---
 
 ## Project Structure
+
+### **Backend**
 ```
 📂 padel-hall-booking-api
 ├── src/
@@ -107,6 +109,51 @@ npm test
 ├── .env                    # Environment variables
 ├── package.json            # Project dependencies & scripts
 ├── README.md               # Documentation
+```
+
+### **Frontend**
+```
+📂 padel-hall-booking-frontend
+├── 📂 src
+│   ├── 📂 app
+│   │   ├── 📂 core
+│   │   │   ├── 📂 services        # API and utility services
+│   │   │   ├── 📂 guards          # Auth and role-based route guards
+│   │   │   ├── 📂 interceptors    # HTTP interceptors (JWT, error handling)
+│   │   │   ├── 📂 models          # TypeScript models/interfaces
+│   │   │   ├── 📂 utils           # Helper functions
+│   │   ├── 📂 shared
+│   │   │   ├── 📂 components      # Reusable UI components
+│   │   │   ├── 📂 directives      # Custom Angular directives
+│   │   │   ├── 📂 pipes           # Custom pipes for data formatting
+│   │   ├── 📂 modules
+│   │   │   ├── 📂 auth            # Login/Register module
+│   │   │   ├── 📂 booking         # Booking-related screens
+│   │   │   ├── 📂 admin           # Admin dashboard & management
+│   │   │   ├── 📂 user            # User profile and settings
+│   │   ├── 📂 pages
+│   │   │   ├── 📂 home            # Landing page
+│   │   │   ├── 📂 about           # About page
+│   │   │   ├── 📂 contact         # Contact page
+│   │   ├── 📂 layout
+│   │   │   ├── header.component.ts # Header UI
+│   │   │   ├── sidebar.component.ts # Sidebar UI
+│   │   │   ├── footer.component.ts # Footer UI
+│   │   ├── app-routing.module.ts  # Centralized route definitions
+│   │   ├── app.component.ts       # Root component
+│   │   ├── app.module.ts          # Main Angular module
+│   ├── 📂 assets
+│   │   ├── 📂 images              # Static images
+│   │   ├── 📂 styles              # Global SCSS styles
+│   ├── 📂 environments            # Configuration for dev/prod
+│   ├── index.html                 # Main HTML file
+│   ├── main.ts                     # Angular entry point
+│   ├── polyfills.ts                 # Compatibility settings
+│   ├── styles.scss                  # Global styles
+│   ├── angular.json                 # Angular CLI configuration
+│   ├── tsconfig.json                 # TypeScript configuration
+│   ├── package.json                  # Dependencies and scripts
+│   ├── README.md                     # Project documentation
 ```
 
 ---
