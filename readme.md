@@ -1,179 +1,133 @@
-# Padel Hall Booking API Documentation
+# Padel Hall Booking System
 
-## Base URL
-`http://localhost:3000/api`
-
----
-
-## Authentication
-
-### **Login**
-- **Endpoint:** `POST /auth/login`
-- **Description:** Authenticate a user and return a JWT token.
-- **Request Body:**
-  ```json
-  {
-    "email": "user@example.com",
-    "password": "password123"
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "token": "your_jwt_token_here"
-  }
-  ```
-- **Error Responses:**
-  - `401 Unauthorized`: Invalid credentials
+## Overview
+The **Padel Hall Booking System** is a **full-stack application** that allows users to book courts for playing padel. The system includes an **administration panel** for employees to manage bookings. It features **JWT authentication**, **role-based access control**, and a structured API for seamless integration.
 
 ---
 
-## Users
-
-### **Fetch All Users (Admin Only)**
-- **Endpoint:** `GET /users`
-- **Headers:**
-  ```
-  Authorization: Bearer your_jwt_token_here
-  ```
-- **Response:**
-  ```json
-  [
-    {
-      "user_id": 1,
-      "name": "Admin User",
-      "email": "admin@example.com",
-      "role": "admin"
-    }
-  ]
-  ```
-- **Error Responses:**
-  - `403 Forbidden`: Access denied for non-admin users
-
-### **Fetch a Single User**
-- **Endpoint:** `GET /users/:id`
-- **Headers:**
-  ```
-  Authorization: Bearer your_jwt_token_here
-  ```
-- **Response:**
-  ```json
-  {
-    "user_id": 1,
-    "name": "John Doe",
-    "email": "john@example.com",
-    "role": "player"
-  }
-  ```
-
-### **Register a User**
-- **Endpoint:** `POST /users`
-- **Request Body:**
-  ```json
-  {
-    "name": "John Doe",
-    "email": "john@example.com",
-    "password": "password123",
-    "role": "player"
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "user_id": 2,
-    "name": "John Doe",
-    "email": "john@example.com",
-    "role": "player"
-  }
-  ```
+## Features
+- **User Authentication:** Secure JWT-based login
+- **Booking System:** Reserve courts with date and time selection
+- **Role-Based Access:** Admins can manage all bookings, players manage their own
+- **Filtering Options:** Search bookings by date, court, and number of players
+- **API Documentation:** Fully documented RESTful API
+- **Unit Testing:** Ensures reliability with Mocha, Chai, and Supertest
 
 ---
 
-## Bookings
+## Tech Stack
+### **Backend**
+- Node.js with Express.js
+- MS SQL Database
+- JWT Authentication
+- RESTful API
+- Unit Testing (Mocha, Chai, Supertest)
 
-### **Fetch All Bookings (Admin Only)**
-- **Endpoint:** `GET /bookings`
-- **Headers:**
-  ```
-  Authorization: Bearer your_jwt_token_here
-  ```
-- **Response:**
-  ```json
-  [
-    {
-      "booking_id": 1,
-      "user_id": 2,
-      "court_id": 3,
-      "players": 4,
-      "booking_date": "2025-02-20",
-      "booking_time": "18:00"
-    }
-  ]
-  ```
-
-### **Create a Booking (Players Only)**
-- **Endpoint:** `POST /bookings`
-- **Headers:**
-  ```
-  Authorization: Bearer your_jwt_token_here
-  ```
-- **Request Body:**
-  ```json
-  {
-    "court_id": 2,
-    "players": 2,
-    "booking_date": "2025-02-20",
-    "booking_time": "16:00"
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "booking_id": 10,
-    "user_id": 2,
-    "court_id": 2,
-    "players": 2,
-    "booking_date": "2025-02-20",
-    "booking_time": "16:00"
-  }
-  ```
-
-### **Delete a Booking**
-- **Endpoint:** `DELETE /bookings/:id`
-- **Headers:**
-  ```
-  Authorization: Bearer your_jwt_token_here
-  ```
-- **Response:**
-  ```json
-  {
-    "message": "Booking deleted successfully"
-  }
-  ```
-- **Error Responses:**
-  - `403 Forbidden`: User is not the owner of the booking or not an admin
-  - `404 Not Found`: Booking does not exist
+### **Frontend (To be developed)**
+- Angular
+- SCSS for styling
+- TypeScript
 
 ---
 
-## Error Handling
+## Installation & Setup
+### **1. Clone the Repository**
+```sh
+git clone https://github.com/your-repo/padel-hall-booking.git
+cd padel-hall-booking
+```
 
-| Status Code | Meaning |
-|-------------|---------|
-| `400` | Bad Request - Validation errors |
-| `401` | Unauthorized - Missing or invalid JWT token |
-| `403` | Forbidden - User does not have access to this resource |
-| `404` | Not Found - Requested resource does not exist |
-| `500` | Internal Server Error - Unexpected server failure |
+### **2. Install Dependencies**
+```sh
+npm install
+```
+
+### **3. Configure Environment Variables**
+Create a `.env` file and set the following:
+```ini
+PORT=3000
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
+DB_SERVER=your_db_server
+DB_NAME=padel_hall_booking
+JWT_SECRET=your_secret_key
+JWT_EXPIRES_IN=1h
+```
+
+### **4. Run the Application**
+```sh
+npm start
+```
+Or for development with automatic restarts:
+```sh
+npm run dev
+```
 
 ---
 
-## Notes
-- This API uses **JWT-based authentication**. Include the `Authorization` header with `Bearer <token>` for protected routes.
-- Admin users have full access to manage users and bookings.
-- Players can only manage their own bookings.
+## API Endpoints
+### **Authentication**
+- `POST /api/auth/login` → Authenticate and return JWT token
+
+### **Users**
+- `GET /api/users` → Fetch all users (Admin only)
+- `GET /api/users/:id` → Fetch a specific user
+- `POST /api/users` → Register a new user
+
+### **Bookings**
+- `GET /api/bookings` → Fetch all bookings (Admin only)
+- `POST /api/bookings` → Create a booking (Players only)
+- `DELETE /api/bookings/:id` → Delete a booking (Admin or owner only)
+
+For full API documentation, see [API Docs](./api-documentation.md)
 
 ---
 
-🔥 **API documentation is ready for use!** 🚀
+## Testing
+Run unit tests:
+```sh
+npm test
+```
+
+---
+
+## Project Structure
+```
+📂 padel-hall-booking-api
+├── src/
+│   ├── config/             # Environment and database configuration
+│   ├── controllers/        # Route controllers for handling logic
+│   ├── middleware/         # Authentication & error handling
+│   ├── models/             # Database models
+│   ├── routes/             # API route definitions
+│   ├── services/           # Business logic layer
+│   ├── tests/              # Unit tests
+│   ├── app.js              # Main application setup
+│   ├── server.js           # Entry point
+├── .env                    # Environment variables
+├── package.json            # Project dependencies & scripts
+├── README.md               # Documentation
+```
+
+---
+
+## Deployment
+To deploy the application:
+1. Set up a production database
+2. Configure environment variables
+3. Run the application using a process manager like **PM2**:
+   ```sh
+   pm2 start server.js --name padel-hall-booking
+   ```
+
+---
+
+## Contributors
+- **Mehmet Kaya** - Developer
+
+For any issues, feel free to open a [GitHub Issue](https://github.com/your-repo/issues).
+
+---
+
+🚀 **Now your project is fully documented and ready to go!** Let me know if you need adjustments or enhancements! 🎯
 
