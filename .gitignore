@@ -1,0 +1,32 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Local environment & IDE settings
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Build output
+dist/
+coverage/
+
+# Ignore test cache and output
+jest/
+test-results/
