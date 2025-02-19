@@ -123,7 +123,7 @@ To deploy the application:
 ---
 
 ## Contributors
-- **IV.anLee** - Developer
+- **IV.anLee & Mehmet Kaya** - Developer
 
 For any issues, feel free to open a [GitHub Issue](https://github.com/your-repo/issues).
 
