@@ -182,6 +182,15 @@ npm test
 │   │   ├── app.component.ts
 │   │   ├── app.module.ts
 │   ├── 📂 assets
+│   │   ├── 📂 images
+│   │   │   ├── logo.png
+│   │   │   ├── hero-padel-court.png
+│   │   │   ├── court.png
+│   │   │   ├── user-avatar.png
+│   │   │   ├── admin-dashboard.png
+│   │   │   ├── login-background.png
+│   │   │   ├── booking-confirmation.png
+│   │   │   ├── 404-error.png
 │   │   ├── 📂 styles
 │   │   │   ├── global.scss
 │   │   │   ├── buttons.scss

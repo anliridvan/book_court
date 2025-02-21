@@ -1,0 +1,45 @@
+// Colors
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$text-color: #212529;
+
+// Reset Styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: $background-color;
+    color: $text-color;
+}
+
+// Button Styles
+button {
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    &.btn-primary {
+        background: $primary-color;
+        color: white;
+    }
+    &.btn-secondary {
+        background: $secondary-color;
+        color: white;
+    }
+}
+
+// Utility Classes
+.text-center {
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
