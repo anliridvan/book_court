@@ -117,43 +117,87 @@ npm test
 ├── 📂 src
 │   ├── 📂 app
 │   │   ├── 📂 core
-│   │   │   ├── 📂 services        # API and utility services
-│   │   │   ├── 📂 guards          # Auth and role-based route guards
-│   │   │   ├── 📂 interceptors    # HTTP interceptors (JWT, error handling)
-│   │   │   ├── 📂 models          # TypeScript models/interfaces
-│   │   │   ├── 📂 utils           # Helper functions
+│   │   │   ├── 📂 services
+│   │   │   │   ├── auth.service.ts
+│   │   │   │   ├── booking.service.ts
+│   │   │   │   ├── user.service.ts
+│   │   │   ├── 📂 guards
+│   │   │   │   ├── auth.guard.ts
+│   │   │   ├── 📂 interceptors
+│   │   │   │   ├── http.interceptor.ts
+│   │   │   ├── 📂 models
+│   │   │   │   ├── user.model.ts
+│   │   │   │   ├── booking.model.ts
+│   │   │   │   ├── court.model.ts
 │   │   ├── 📂 shared
-│   │   │   ├── 📂 components      # Reusable UI components
-│   │   │   ├── 📂 directives      # Custom Angular directives
-│   │   │   ├── 📂 pipes           # Custom pipes for data formatting
+│   │   │   ├── 📂 components
+│   │   │   │   ├── button.component.ts
+│   │   │   │   ├── input.component.ts
+│   │   │   │   ├── spinner.component.ts
+│   │   │   ├── 📂 directives
+│   │   │   │   ├── click.directive.ts
+│   │   │   ├── 📂 pipes
+│   │   │   │   ├── uppercase.pipe.ts
 │   │   ├── 📂 modules
-│   │   │   ├── 📂 auth            # Login/Register module
-│   │   │   ├── 📂 booking         # Booking-related screens
-│   │   │   ├── 📂 admin           # Admin dashboard & management
-│   │   │   ├── 📂 user            # User profile and settings
+│   │   │   ├── 📂 auth
+│   │   │   │   ├── auth.module.ts
+│   │   │   │   ├── login.component.ts
+│   │   │   │   ├── register.component.ts
+│   │   │   ├── 📂 booking
+│   │   │   │   ├── booking.module.ts
+│   │   │   │   ├── booking.component.ts
+│   │   │   ├── 📂 admin
+│   │   │   │   ├── admin.module.ts
+│   │   │   │   ├── admin.component.ts
+│   │   │   │   ├── user-management.component.ts
+│   │   │   ├── 📂 user
+│   │   │   │   ├── user.module.ts
+│   │   │   │   ├── user-profile.component.ts
+│   │   │   │   ├── user-settings.component.ts
 │   │   ├── 📂 pages
-│   │   │   ├── 📂 home            # Landing page
-│   │   │   ├── 📂 about           # About page
-│   │   │   ├── 📂 contact         # Contact page
+│   │   │   ├── 📂 home
+│   │   │   │   ├── home.module.ts
+│   │   │   │   ├── home.component.ts
+│   │   │   │   ├── home.component.html
+│   │   │   │   ├── home.component.scss
+│   │   │   ├── 📂 about
+│   │   │   │   ├── about.component.ts
+│   │   │   │   ├── about.component.html
+│   │   │   │   ├── about.component.scss
+│   │   │   ├── 📂 contact
+│   │   │   │   ├── contact.component.ts
+│   │   │   │   ├── contact.component.html
+│   │   │   │   ├── contact.component.scss
 │   │   ├── 📂 layout
-│   │   │   ├── header.component.ts # Header UI
-│   │   │   ├── sidebar.component.ts # Sidebar UI
-│   │   │   ├── footer.component.ts # Footer UI
-│   │   ├── app-routing.module.ts  # Centralized route definitions
-│   │   ├── app.component.ts       # Root component
-│   │   ├── app.module.ts          # Main Angular module
+│   │   │   ├── header.component.ts
+│   │   │   ├── header.component.html
+│   │   │   ├── header.component.scss
+│   │   │   ├── sidebar.component.ts
+│   │   │   ├── sidebar.component.html
+│   │   │   ├── sidebar.component.scss
+│   │   │   ├── footer.component.ts
+│   │   │   ├── footer.component.html
+│   │   │   ├── footer.component.scss
+│   │   ├── app-routing.module.ts
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
 │   ├── 📂 assets
-│   │   ├── 📂 images              # Static images
-│   │   ├── 📂 styles              # Global SCSS styles
-│   ├── 📂 environments            # Configuration for dev/prod
-│   ├── index.html                 # Main HTML file
-│   ├── main.ts                     # Angular entry point
-│   ├── polyfills.ts                 # Compatibility settings
-│   ├── styles.scss                  # Global styles
-│   ├── angular.json                 # Angular CLI configuration
-│   ├── tsconfig.json                 # TypeScript configuration
-│   ├── package.json                  # Dependencies and scripts
-│   ├── README.md                     # Project documentation
+│   │   ├── 📂 styles
+│   │   │   ├── global.scss
+│   │   │   ├── buttons.scss
+│   │   │   ├── typography.scss
+│   │   │   ├── forms.scss
+│   ├── 📂 environments
+│   │   ├── environment.ts
+│   │   ├── environment.prod.ts
+│   ├── index.html
+│   ├── main.ts
+│   ├── polyfills.ts
+│   ├── styles.scss
+│   ├── angular.json
+│   ├── tsconfig.json
+│   ├── package.json
+│   ├── README.md
 ```
 
 ---
