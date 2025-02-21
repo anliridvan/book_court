@@ -142,18 +142,34 @@ npm test
 │   │   │   ├── 📂 auth
 │   │   │   │   ├── auth.module.ts
 │   │   │   │   ├── login.component.ts
+│   │   │   │   ├── login.component.html
+│   │   │   │   ├── login.component.scss
 │   │   │   │   ├── register.component.ts
+│   │   │   │   ├── register.component.html
+│   │   │   │   ├── register.component.scss
 │   │   │   ├── 📂 booking
 │   │   │   │   ├── booking.module.ts
 │   │   │   │   ├── booking.component.ts
+│   │   │   │   ├── booking.component.html
+│   │   │   │   ├── booking.component.scss
+│   │   │   │   ├── booking-confirmation.component.html
+│   │   │   │   ├── booking-routing.module.ts
 │   │   │   ├── 📂 admin
 │   │   │   │   ├── admin.module.ts
 │   │   │   │   ├── admin.component.ts
+│   │   │   │   ├── admin.component.html
+│   │   │   │   ├── admin.component.scss
 │   │   │   │   ├── user-management.component.ts
+│   │   │   │   ├── user-management.component.html
+│   │   │   │   ├── user-management.component.scss
 │   │   │   ├── 📂 user
 │   │   │   │   ├── user.module.ts
 │   │   │   │   ├── user-profile.component.ts
+│   │   │   │   ├── user-profile.component.html
+│   │   │   │   ├── user-profile.component.scss
 │   │   │   │   ├── user-settings.component.ts
+│   │   │   │   ├── user-settings.component.html
+│   │   │   │   ├── user-settings.component.scss
 │   │   ├── 📂 pages
 │   │   │   ├── 📂 home
 │   │   │   │   ├── home.module.ts
@@ -178,10 +194,18 @@ npm test
 │   │   │   ├── footer.component.ts
 │   │   │   ├── footer.component.html
 │   │   │   ├── footer.component.scss
+│   │   ├── 📂 error-pages
+│   │   │   ├── 404.component.html
+│   │   │   ├── 404.component.scss
 │   │   ├── app-routing.module.ts
 │   │   ├── app.component.ts
 │   │   ├── app.module.ts
 │   ├── 📂 assets
+│   │   ├── 📂 styles
+│   │   │   ├── global.scss
+│   │   │   ├── buttons.scss
+│   │   │   ├── typography.scss
+│   │   │   ├── forms.scss
 │   │   ├── 📂 images
 │   │   │   ├── logo.png
 │   │   │   ├── hero-padel-court.png
@@ -191,11 +215,6 @@ npm test
 │   │   │   ├── login-background.png
 │   │   │   ├── booking-confirmation.png
 │   │   │   ├── 404-error.png
-│   │   ├── 📂 styles
-│   │   │   ├── global.scss
-│   │   │   ├── buttons.scss
-│   │   │   ├── typography.scss
-│   │   │   ├── forms.scss
 │   ├── 📂 environments
 │   │   ├── environment.ts
 │   │   ├── environment.prod.ts
