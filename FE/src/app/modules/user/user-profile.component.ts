@@ -5,4 +5,17 @@ import { Component } from '@angular/core';
     templateUrl: './user-profile.component.html',
     styleUrls: ['./user-profile.component.scss']
 })
-export class UserProfileComponent {}
+export class UserProfileComponent {
+    user = {
+        name: 'John Doe',
+        email: 'john@example.com'
+    };
+
+    editProfile() {
+        console.log('Edit Profile clicked');
+    }
+
+    logout() {
+        console.log('User logged out');
+    }
+}
