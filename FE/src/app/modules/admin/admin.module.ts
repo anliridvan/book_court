@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AdminComponent } from './admin/admin.component';
-import { UserManagementComponent } from './admin/user-management.component';
+import { AdminComponent } from './admin.component';
+import { UserManagementComponent } from './user-management.component';
 
 @NgModule({
     declarations: [AdminComponent, UserManagementComponent],

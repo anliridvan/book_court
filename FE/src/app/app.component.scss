@@ -1,0 +1,29 @@
+// Global Styles for App Component
+:host {
+    display: block;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+// Main Layout Styling
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+// Header & Footer Styling
+app-header, app-footer {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+}

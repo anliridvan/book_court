@@ -1,0 +1,16 @@
+{
+    "extends": ["tslint:recommended"],
+    "rules": {
+      "semicolon": [true, "always"],
+      "quotemark": [true, "double"],
+      "indent": [true, "spaces", 2],
+      "trailing-comma": [true, {
+        "multiline": "always",
+        "singleline": "never"
+      }],
+      "no-console": false,
+      "arrow-parens": [true, "ban-single-arg-parens"],
+      "object-literal-sort-keys": false,
+      "ordered-imports": false
+    }
+  }
